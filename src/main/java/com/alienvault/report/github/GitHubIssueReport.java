@@ -74,10 +74,10 @@ public class GitHubIssueReport implements Reportable {
      */
     private String buildTopDaySection(List<SimpleRepo> repoList, TopDay currentTopDay) {
         if(currentTopDay.getDate() == null){
-            return "\"top_day\":{}";
+            return "\"top_day\": { }";
         }else {
 
-            StringBuilder topDay = new StringBuilder("\"top_day\":{\"day\":\"" + currentTopDay.getDate() + "\", \"occurences\": {");
+            StringBuilder topDay = new StringBuilder("\"top_day\": { \"day\": \"" + currentTopDay.getDate() + "\", \"occurences\": { ");
 
             for (int i = 0; i < repoList.size(); i++) {
                 TopDay td = repoList.get(i).getTopDay(currentTopDay.getDate());
@@ -88,7 +88,7 @@ public class GitHubIssueReport implements Reportable {
                 }
             }
 
-            topDay.append("}}");
+            topDay.append(" } } ");
             return topDay.toString();
         }
     }
