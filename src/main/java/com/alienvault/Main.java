@@ -69,7 +69,7 @@ public class Main {
         String[] repos;
 
         if(args.length == 0) {
-            repos = new String[]{"markmaz/alienvault"};
+            repos = new String[]{"markmaz/alienvault", "arduosoft/RawCMS"};
         }else{
             repos = args;
         }

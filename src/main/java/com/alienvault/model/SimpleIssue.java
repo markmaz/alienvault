@@ -79,7 +79,7 @@ public class SimpleIssue implements Comparable<SimpleIssue>
     }
 
     public String toJson(){
-        return "{\"id\":" + this.id + ", \"state\":\"" + this.state + "\", \"title\":\"" + this.title + "\", \"repository\":\"" +  this.repository + "\", \"create_at\":\"" +  getFormattedDate() + "\"}";
+        return "{\"id\":" + this.id + ", \"state\":\"" + this.state + "\", \"title\":\"" + this.title + "\", \"repository\":\"" +  this.repository + "\", \"created_at\":\"" +  getFormattedDate() + "\"}";
     }
 
     @Override
